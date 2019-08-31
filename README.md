@@ -1,2 +1,0 @@
-# anfield
-Anfield Pub
