@@ -6,12 +6,11 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
-  plugins: [
-    {
+  plugins: [{
       resolve: `gatsby-source-contentful`,
       options: {
         spaceId: `uxko2dmmz5no`,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: `X4h-MbRIgq1TkU5rcomM4xBivJGzKcSMBaoqxW5sqfw`,
       },
     },
     `gatsby-plugin-react-helmet`,

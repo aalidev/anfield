@@ -224,12 +224,17 @@ export const Accordion = ({ items }) => {
             {data.content &&
               data.content.map(
                 menu =>
-                  menu.node && (
-                    <StyledMenu>
-                      <p className="menu-name">{menu.node.name}</p>
-                      <span></span>
-                      <p className="menu-price">{menu.node.price}</p>
-                    </StyledMenu>
+                  menu.title && (
+                    <>
+                    <p>{menu.title}</p>
+                      {menu.fields && menu.fields.map(data => ( 
+                      <StyledMenu>
+                        <p className="menu-name">{data.node.name}</p>
+                        <span></span>
+                        <p className="menu-price">{data.node.price}</p>
+                      </StyledMenu>
+                      ))} 
+                    </> 
                   )
               )}
           </StyledExpansionPanelContent>

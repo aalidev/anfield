@@ -9,7 +9,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-    query MyCode {
+    query Menu {
       allContentfulBeers {
         edges {
           node {

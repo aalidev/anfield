@@ -23,12 +23,22 @@ const Menu = ({ data }) => {
   console.log("menu", data.allContentfulBeers.edges)
   const items = [
     {
-      title: "Пиво",
-      content: data.allContentfulBeers.edges,
+      title: "Бар",
+      content: [
+        {
+          title: "Пиво",
+          fields: data.allContentfulBeers.edges
+        }
+      ],
     },
     {
-      title: "Вино",
-      content: data.allContentfulWines.edges,
+      title: "Кухня",
+      content: [
+        {
+          title: "Салаты",
+          fields: data.allContentfulWines.edges
+        }
+      ],
     },
   ]
   return (

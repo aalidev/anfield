@@ -1,23 +1,32 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
-
+import media from "styled-media-query"
+import Carousel from "react-slick"
 const StyledHero = styled.div`
   color: #fff;
   z-index: 12;
 
   h1 {
-    font-size: 6.75rem;
+    font-size: 55px;
     font-weight: 500;
     margin: 0;
     z-index: 999;
+    
+    ${media.greaterThan("medium")`
+    font-size: 6.75rem;
+    `}
   }
 
   p {
     margin: 0;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 2rem;
+    
+    ${media.greaterThan("medium")`
+    font-size: 24px;
+    `}
   }
 
   .bg-image {
@@ -34,7 +43,6 @@ const StyledHero = styled.div`
 
   .container-title {
     position: absolute;
-    overflow: hidden;
     top: 50%;
     left: 0;
     text-align: center;
@@ -47,6 +55,13 @@ const StyledHero = styled.div`
       color: #fff;
       border: 2px solid #fff;
       padding: 5px 15px;
+      margin-right: 0.5rem;
+    }
+
+    .call-to {
+      margin-right: 0;
+      background: #00C9A7;
+      border: 2px solid #00C9A7;
     }
   }
 
@@ -60,13 +75,23 @@ const StyledHero = styled.div`
 `
 
 const Hero = ({ data }) => {
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  }
+
   return (
     <StyledHero>
       <div className="container">
         <div className="container-title">
           <h1>Welcome</h1>
           <p>Лучшее место для просмотра матча</p>
-          <a href="#menu"> Menu </a>
+          <a href="#menu">Меню</a>
+          <a className="call-to" href="tel:87770000939">Позвонить</a>
         </div>
       </div>
       <div className="bg-image">
