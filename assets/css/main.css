@@ -3955,3 +3955,7 @@ input, select, textarea {
 	  .items {
 		  margin-top: 2rem;
 	  }
+
+	  .email {
+		  font-weight: bold;
+	  }
